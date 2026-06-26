@@ -25,20 +25,6 @@ public class ObstacleSpawner : MonoBehaviour
             SpawnObstacle();
         }
     }
-
-    /* void SpawnObstacles()
-    {
-        GameObject obstacle = Instantiate(obstaclePrefab);
-
-        // Put the obstacle in one of the lanes
-        obstacle.transform.position = new Vector3(GetRandomLane(), player.groundY, 0);
-
-        Obstacle obstacleScript = obstacle.GetComponent<Obstacle>();
-        obstacleScript.horizonY = horizonY;
-
-        obstacleScript.zPos = spawnDistance;
-        obstacleScript.speed = GetRandomSpeed();
-    } */
     void SpawnObstacle()
     {
         GameObject obstacle = Instantiate(obstaclePrefab);
@@ -92,19 +78,3 @@ public class ObstacleSpawner : MonoBehaviour
         return Random.Range(minSpeed, maxSpeed);
     }
 }
-
-
-
-/* void SpawnObstacle()
-    {
-        GameObject obstacle = Instantiate(obstaclePrefab);
-        Obstacle obstacleScript = obstacle.GetComponent<Obstacle>();
-        // obstacleScript.spawnZ = spawnZ;
-        obstacleScript.horizonY = horizonY;
-        obstacleScript.groundY = player.groundY;
-        obstacleScript.laneWidth = player.laneOffset;
-
-        obstacleScript.speed = GetRandomSpeed();
-
-        obstacleScript.lane = Random.Range(0, 3);
-    } */
